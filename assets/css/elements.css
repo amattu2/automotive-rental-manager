@@ -1,0 +1,132 @@
+/*
+	Produced 2019
+	By https://amattu.com/links/github
+	Copy Alec M.
+	License GNU Affero General Public License v3.0
+*/
+
+:root {
+	--navigation-width-px: 280px;
+	--box-shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+	--box-shadow-2: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-1 {
+	display: block;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: var(--box-shadow-1);
+	width: 400px;
+	margin: 15px auto;
+	color: #3b3b3b;
+	transition: opacity 0.2s ease-out;
+}
+
+.card-1[data-reserved="true"] {
+	opacity: 0.5;
+	cursor: not-allowed;
+	user-select: none;
+	position: relative;
+}
+
+.card-1[data-reserved="true"]:before {
+	content: " RESERVED ";
+	color: #3b3b3b;
+	font-weight: bold;
+	font-size: 55px;
+	opacity: 0.7;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.card-1 .card-title {
+	padding: 12px 10px;
+}
+
+.card-1  .card-title-text-main {
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.card-1  .card-title-text {
+	padding-left: 10px;
+}
+
+.card-1  .card-title-text-secondary {
+	margin-top: 3px;
+	opacity: 0.8;
+}
+
+.card-1 .card-image {
+	width: 400px;
+	height: 150px;
+}
+
+.card-1 .card-image img {
+	-webkit-user-drag: none;
+}
+
+.card-1 .card-text {
+	padding: 10px;
+	font-size: 14px;
+	user-select: none;
+}
+
+.card-1  .card-actions {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	user-select: none;
+}
+
+.card-1  .card-action {
+	margin-right: 10px;
+	font-size: 14px;
+	color: #6b2ffb;
+	text-transform: uppercase;
+}
+
+.card-1 .card-action-icon, .card-1 .card-action {
+	cursor: pointer;
+}
+
+.card-1[data-reserved="true"] .card-title, .card-1[data-reserved="true"] .card-action {
+	text-decoration: line-through;
+}
+
+.card-2 {
+	display: block;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: var(--box-shadow-1);
+	box-sizing: border-box;
+	width: calc(100% - 50px);
+	padding: 12px;
+	margin: 0 25px;
+	margin-top: 15px;
+	color: #3b3b3b;
+	transition: opacity 0.2s ease-out;
+}
+
+.card-2 .card-title {
+	font-weight: bold;
+	font-size: 20px;
+	color: #6b2ffb;
+	margin-bottom: 10px;
+	opacity: 0.8;
+}
+
+.card-2 .card-text {font-size: 14px;margin-bottom: 15px;}
+
+.card-2 .card-actions {
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+	padding-top: 10px;
+}
+
+.card-2 .card-action {
+	color: #6b2ffb;
+	text-transform: uppercase;
+	font-size: 14px;
+}
