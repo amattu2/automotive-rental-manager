@@ -93,7 +93,7 @@
 }
 
 .card-1[data-reserved="true"] .card-title, .card-1[data-reserved="true"] .card-action {
-	text-decoration: line-through;
+	/*text-decoration: line-through;*/
 }
 
 .card-2 {
