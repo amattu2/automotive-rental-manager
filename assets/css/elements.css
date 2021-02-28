@@ -18,8 +18,6 @@
   background: #fff;
   border-radius: 3px;
   box-shadow: var(--box-shadow-1);
-  width: 400px;
-  margin: 15px auto;
   color: #3b3b3b;
   transition: opacity var(--standard-animation-duration) ease-out;
 }
@@ -62,12 +60,13 @@
 }
 
 .card-1 .card-image {
-  width: 400px;
-  height: 150px;
+  width: 100%;
+  height: auto;
 }
 
 .card-1 .card-image img {
   -webkit-user-drag: none;
+  width: 100%;
 }
 
 .card-1 .card-text {
@@ -106,10 +105,7 @@
   border-radius: 3px;
   box-shadow: var(--box-shadow-1);
   box-sizing: border-box;
-  width: calc(100% - 50px);
   padding: 12px;
-  margin: 0 25px;
-  margin-top: 15px;
   color: #3b3b3b;
   transition: opacity var(--standard-animation-duration) ease-out;
   user-select: none;
