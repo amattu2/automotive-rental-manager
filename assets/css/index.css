@@ -11,9 +11,6 @@ body {
   margin: 0;
   height: 100%;
   font-family: sans-serif;
-  background-color: #fff;
-  background-image: url("../img/background.svg");
-  background-repeat: repeat;
 }
 
 .container {
@@ -23,6 +20,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  background-image: url("../img/background.svg");
+  background-repeat: repeat;
 }
 
 .case {
