@@ -1,8 +1,8 @@
 /*
-	Produced 2019
-	By https://amattu.com/links/github
-	Copy Alec M.
-	License GNU Affero General Public License v3.0
+  Produced 2019-2021
+  By https://amattu.com/links/github
+  Copy Alec M.
+  License GNU Affero General Public License v3.0
 */
 
 // Loops
