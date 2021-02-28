@@ -10,6 +10,7 @@
   --box-shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   --box-shadow-2: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   --theme-color-1: #2980b9;
+  --standard-animation-duration: 0.2s;
 }
 
 .card-1 {
@@ -20,7 +21,7 @@
   width: 400px;
   margin: 15px auto;
   color: #3b3b3b;
-  transition: opacity 0.2s ease-out;
+  transition: opacity var(--standard-animation-duration) ease-out;
 }
 
 .card-1[data-reserved="true"] {
@@ -110,7 +111,7 @@
   margin: 0 25px;
   margin-top: 15px;
   color: #3b3b3b;
-  transition: opacity 0.2s ease-out;
+  transition: opacity var(--standard-animation-duration) ease-out;
   user-select: none;
 }
 
@@ -149,7 +150,7 @@
   background: #fff;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: -5px 0 20px 0 rgba(66, 66, 66, 0.2);
-  transition: all 0.3s ease-in;
+  transition: all var(--standard-animation-duration) ease-in;
   z-index: 999;
 }
 
