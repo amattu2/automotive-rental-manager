@@ -56,7 +56,29 @@
 
 .card-1 .card-title-text-secondary {
   margin-top: 3px;
+  font-size: 13px;
   opacity: 0.8;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-1 .secondary-text-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1 .secondary-text-group .outlined {
+  background: var(--theme-color-1);
+  border-radius: 3px;
+  color: #fff;
+  padding: 3px;
+  margin-left: 5px;
+}
+
+.card-1 .secondary-text-group:not(:first-of-type) {
+  margin-left: 5px;
 }
 
 .card-1 .card-image {
@@ -73,6 +95,8 @@
   padding: 10px;
   font-size: 14px;
   user-select: none;
+  height: 52px;
+  box-sizing: border-box;
 }
 
 .card-1 .card-actions {
@@ -120,11 +144,8 @@
 }
 
 .card-2 .card-text {
-  padding: 10px;
   font-size: 14px;
-  user-select: none;
-  height: 52px;
-  box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
 .card-2 .card-actions {

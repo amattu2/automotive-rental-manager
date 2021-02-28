@@ -185,3 +185,9 @@ body {
 .link-item .link-item-text {
   font-size: 19px;
 }
+
+.last-8 {
+  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: 1.1;
+}
