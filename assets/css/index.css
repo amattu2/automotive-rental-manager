@@ -63,6 +63,7 @@ body {
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   padding: 15px;
+  box-sizing: border-box;
 }
 
 .content.grid .full-item {
