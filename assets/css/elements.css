@@ -96,7 +96,7 @@
 
 .card-1[data-reserved="true"] .card-title,
 .card-1[data-reserved="true"] .card-action {
-  /*text-decoration: line-through;*/
+  /* text-decoration: line-through; */
 }
 
 .card-2 {
@@ -138,4 +138,41 @@
   font-size: 14px;
   cursor: pointer;
   user-select: none;
+}
+
+.popover {
+  position: absolute;
+  right: -530px;
+  top: 0;
+  bottom: 0;
+  width: 530px;
+  background: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 0 20px 0 rgba(66, 66, 66, 0.2);
+  transition: all 0.3s ease-in;
+  z-index: 999;
+}
+
+.popover.active {
+  right: 0;
+}
+
+.popover-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background: #3b3b3b;
+  color: #fff;
+  font-size: 21px;
+  padding: 0 25px;
+}
+
+.popover-title .title {
+  margin-right: auto;
+}
+
+.popover-title .times {
+  font-size: 33px;
+  cursor: pointer;
 }
