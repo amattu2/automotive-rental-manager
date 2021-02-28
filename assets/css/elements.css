@@ -120,8 +120,11 @@
 }
 
 .card-2 .card-text {
+  padding: 10px;
   font-size: 14px;
-  margin-bottom: 15px;
+  user-select: none;
+  height: 52px;
+  box-sizing: border-box;
 }
 
 .card-2 .card-actions {
