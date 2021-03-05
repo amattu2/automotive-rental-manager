@@ -194,34 +194,30 @@ body {
   letter-spacing: 1.1;
 }
 
-/** TEMP TEMP TEMP TEMP **/
-/** TEMP TEMP TEMP TEMP **/
-/** TEMP TEMP TEMP TEMP **/
-/** TEMP TEMP TEMP TEMP **/
-.ticket-list table {
+.rental-list table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.ticket-list table tbody tr {
+.rental-list table tbody tr {
   transition: background 0.2s ease;
   cursor: pointer;
   font-size: 14px;
 }
 
-.ticket-list tr.dark {
+.rental-list tr.dark {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.ticket-list table tbody tr.selected td.checkbox {
+.rental-list table tbody tr.selected td.checkbox {
   border-left: 8px solid var(--colors-blue);
 }
 
-.ticket-list table tbody tr:hover {
+.rental-list table tbody tr:hover {
   background: #f9f9f9;
 }
 
-.ticket-list table thead th {
+.rental-list table thead th {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   font-weight: 300;
   font-size: 14px;
@@ -229,71 +225,47 @@ body {
   user-select: none;
 }
 
-.ticket-list table th, .ticket-list table td {
+.rental-list table th,
+.rental-list table td {
   text-align: center;
 }
 
-.ticket-list table td {
+.rental-list table td {
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.ticket-list table .checkbox {
+.rental-list table .checkbox {
   width: 45px;
   box-sizing: border-box;
   border-left: 8px solid transparent;
 }
 
-.ticket-list table .description {
-  text-align: left;
-}
-
-.ticket-list-header-option {
-  display: none;
-  width: 100%;
-}
-
-.ticket-list-header-option.active {
-  display: flex;
-}
-
-.ticket-list .item-small-line {
+.rental-list .item-small-line {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 13px;
 }
 
-.ticket-list .item-description {
-  text-align: left;
-}
-
-.ticket-list .item-date {
+.rental-list .item-date {
   margin-right: 5px;
   margin-left: auto;
 }
 
-.ticket-list .item-ticket-customer {
+.rental-list .item-ticket-customer {
   margin-right: auto;
 }
 
-.ticket-list .item-separator {
+.rental-list .item-separator {
   margin: 0 4px;
   opacity: 0.6;
 }
 
-.ticket-list .item-small-line.last-item {
-  margin-top: 5px;
-}
-
-.ticket-list-item-small {
-  padding-left: 10px;
-}
-
-.ticket-list table td:nth-child(5),
-.ticket-list table th:nth-child(5),
-.ticket-list table td:nth-child(4),
-.ticket-list table th:nth-child(4) {
+.rental-list table td:nth-child(5),
+.rental-list table th:nth-child(5),
+.rental-list table td:nth-child(4),
+.rental-list table th:nth-child(4) {
   text-align: left;
 }
 
