@@ -1,5 +1,5 @@
 # Introduction
-This is a web based rental agreement writer/manager application. It handles vehicle status tracking, rental agreement writing and printing, and minor customer management. 
+**IMCOMPLETE**. This is a web based rental agreement writer/manager application. It handles vehicle status tracking, rental agreement writing and printing, and minor customer management. 
 
 # Usage
 N/A
@@ -11,4 +11,4 @@ This does not provide you or the rentee with a license to drive, nor should it b
 N/A
 
 # Previews
-N/A
+![img](https://i.imgur.com/lrrXCTc.png)
