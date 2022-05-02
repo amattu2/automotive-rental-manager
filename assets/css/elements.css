@@ -98,11 +98,24 @@
 .card-1 .card-image {
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 .card-1 .card-image img {
   -webkit-user-drag: none;
   width: 100%;
+}
+
+.card-1 .card-image .image-note {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--box-shadow-1);
+  padding: 6px;
+  border-radius: 3px;
+  user-select: none;
 }
 
 .card-1 .card-text {
