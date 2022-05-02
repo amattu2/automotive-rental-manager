@@ -287,3 +287,20 @@ body {
   user-select: none;
   margin-bottom: 0;
 }
+
+@media only screen and (max-width: 1199px) {
+  .container > .case {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container .case .navigation {
+    border-radius: unset;
+  }
+
+  .content .case .content.grid {
+    border-radius: unset;
+  }
+}
