@@ -19,30 +19,67 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// Events
-document.querySelectorAll('.profile .profile-item').forEach(element => {
+async function setup(event) {
+  /**
+   * List of URIs to available pages
+   *
+   * @var {Array}
+   */
+  const PAGES = [
+    "assets/html/overview.html",
+    "assets/html/vehicles.html",
+  ];
+
+  const loadPage = async (uri) => {
+    if (!PAGES.includes(uri)) {
+      return false;
+    }
+
+    // Load page
+    const page = await fetch(uri);
+    const html = await page.text();
+
+    // Update page
+    document.querySelector(".content.grid").outerHTML = html;
+    document.querySelectorAll(".links .link-item.active").forEach(activeLink => activeLink.classList.remove("active"));
+    document.querySelector(`.links .link-item[data-href="${uri}"`).classList.add("active");
+  }
+
   // Events
-  element.onclick = (event) => {
-    event.stopPropagation();
+  document.querySelectorAll('.links .link-item').forEach(element => {
+    element.onclick = async (event) => {
+      if (!PAGES.includes(element.getAttribute("data-href"))) {
+        return false;
+      }
+
+      // Load page
+      loadPage(element.getAttribute("data-href"));
+    };
+  });
+  document.querySelectorAll('.profile .profile-item').forEach(element => {
+    // Events
+    element.onclick = (event) => event.stopPropagation();
+  });
+  document.querySelectorAll('.card-actions .card-action').forEach(element => {
+    element.onclick = (event) => {
+      document.getElementById('rental-edit-popover').classList.add('active');
+    };
+  });
+  document.getElementById('profile-toggle').onclick = (event) => {
+    document.getElementById('profile-toggle').classList.toggle('active');
   };
-});
-document.querySelectorAll('.card-actions .card-action').forEach(element => {
-  element.onclick = (event) => {
-    document.getElementById('rental-edit-popover').classList.add('active');
+  document.getElementById('profile-toggle').onmouseenter = (event) => {
+    if (document.getElementById('profile-toggle').classList.contains("active")) {
+      return false;
+    }
+    document.getElementById('profile-expand').textContent = document.getElementById('profile-expand').textContent == "expand_more" ? "expand_less" : "expand_more";
   };
-});
-document.getElementById('profile-toggle').onclick = (event) => {
-  document.getElementById('profile-toggle').classList.toggle('active');
-};
-document.getElementById('profile-toggle').onmouseenter = (event) => {
-  if (document.getElementById('profile-toggle').classList.contains("active")) {
-    return false;
-  }
-  document.getElementById('profile-expand').textContent = document.getElementById('profile-expand').textContent == "expand_more" ? "expand_less" : "expand_more";
-};
-document.getElementById('profile-toggle').onmouseleave = (event) => {
-  if (document.getElementById('profile-toggle').classList.contains("active")) {
-    return false;
-  }
-  document.getElementById('profile-expand').textContent = document.getElementById('profile-expand').textContent == "expand_more" ? "expand_less" : "expand_more";
-};
+  document.getElementById('profile-toggle').onmouseleave = (event) => {
+    if (document.getElementById('profile-toggle').classList.contains("active")) {
+      return false;
+    }
+    document.getElementById('profile-expand').textContent = document.getElementById('profile-expand').textContent == "expand_more" ? "expand_less" : "expand_more";
+  };
+}
+
+window.onload = (e) => setup(e);
