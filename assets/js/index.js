@@ -80,6 +80,8 @@ async function setup(event) {
     }
     document.getElementById('profile-expand').textContent = document.getElementById('profile-expand').textContent == "expand_more" ? "expand_less" : "expand_more";
   };
+
+  loadPage(PAGES[0]);
 }
 
 window.onload = (e) => setup(e);
